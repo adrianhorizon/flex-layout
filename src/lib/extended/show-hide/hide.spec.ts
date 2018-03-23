@@ -9,6 +9,12 @@ import {Component, OnInit, PLATFORM_ID} from '@angular/core';
 import {CommonModule, isPlatformServer} from '@angular/common';
 import {ComponentFixture, TestBed, inject} from '@angular/core/testing';
 import {
+  makeCreateTestComponent,
+  expectNativeEl,
+  queryFor,
+  customMatchers,
+  expect,
+  NgMatchers,
   MatchMedia,
   CoreModule,
   MockMatchMedia,
@@ -18,10 +24,6 @@ import {
   StyleUtils,
 } from '@angular/flex-layout/core';
 
-import {customMatchers, expect, NgMatchers} from '../../utils/testing/custom-matchers';
-import {
-  makeCreateTestComponent, expectNativeEl, queryFor
-} from '../../utils/testing/helpers';
 import {ShowHideDirective} from './show-hide';
 
 

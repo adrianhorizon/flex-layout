@@ -28,9 +28,9 @@ import {
   MediaChange,
   MediaMonitor,
   StyleUtils,
+  extendObject,
 } from '@angular/flex-layout/core';
 
-import {extendObject} from '../../utils/object-extend';
 import {
   NgStyleRawList,
   NgStyleType,

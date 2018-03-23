@@ -9,6 +9,12 @@ import {Component, PLATFORM_ID} from '@angular/core';
 import {CommonModule, isPlatformServer} from '@angular/common';
 import {ComponentFixture, TestBed, inject} from '@angular/core/testing';
 import {
+  customMatchers,
+  expectEl,
+  makeCreateTestComponent,
+  queryFor,
+  _dom as _,
+  expect,
   MatchMedia,
   MockMatchMedia,
   MockMatchMediaProvider,
@@ -16,11 +22,7 @@ import {
   StyleUtils,
 } from '@angular/flex-layout/core';
 
-import {FlexLayoutModule} from '../../module';
-import {customMatchers} from '../../utils/testing/custom-matchers';
-import {expectEl, makeCreateTestComponent, queryFor} from '../../utils/testing/helpers';
-import {expect} from '../../utils/testing/custom-matchers';
-import {_dom as _} from '../../utils/testing/dom-tools';
+import {ExtendedModule} from '../module';
 
 const SRC_URLS = {
   'xs': [
@@ -72,7 +74,7 @@ describe('img-src directive', () => {
 
     // Configure testbed to prepare services
     TestBed.configureTestingModule({
-      imports: [CommonModule, FlexLayoutModule],
+      imports: [CommonModule, ExtendedModule],
       declarations: [TestSrcComponent],
       providers: [
         MockMatchMediaProvider,

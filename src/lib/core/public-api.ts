@@ -20,3 +20,5 @@ export * from './observable-media/index';
 
 export * from './responsive-activation/responsive-activation';
 export * from './style-utils/style-utils';
+export * from './utils/index';
+export * from './testing/index';
